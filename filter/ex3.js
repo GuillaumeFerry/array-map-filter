@@ -23,8 +23,19 @@ Sortie attendue:
 
  */
 
-function keepStarks(names) {
+const keepStarks = (names) => {
+    const result = names.filter((poulet) => poulet.match(/Stark$/gm)) // ou poulet.endsWith('Stark')
+    return result
 }
+
+/*console.log(keepStarks([
+    'Bran Stark',
+    'Cersei Lannister',
+    'Sandor Clegane',
+    'Arya Stark',
+    'Yara Greyjoy',
+    'Sansa Stark'
+  ]));*/
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
